@@ -38,8 +38,8 @@
     "postinstall": "node lib/install.js",
     "linkcheck": "linkcheck --check-anchors https://tylerbutler.com",
     "lint": "eslint .",
-    "mocha": "mocha",
-    "test": "concurrently npm:lint npm:mocha"
+    "test": "mocha",
+    "prepack": "concurrently npm:lint npm:test"
   },
   "eslintConfig": {
     "env": {
