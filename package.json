@@ -62,7 +62,7 @@
     "read-pkg-up": "^9.0.0"
   },
   "devDependencies": {
-    "concurrently": "^6.3.0",
+    "concurrently": "^7.2.1",
     "eslint": "^8.0.1",
     "mocha": "^9.1.3"
   },
