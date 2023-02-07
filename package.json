@@ -57,12 +57,12 @@
     ]
   },
   "dependencies": {
-    "careful-downloader": "^2.0.1",
-    "log-symbols": "^5.0.0",
-    "read-pkg-up": "^9.0.0"
+    "careful-downloader": "^2.0.2",
+    "log-symbols": "^5.1.0",
+    "read-pkg-up": "^9.1.0"
   },
   "devDependencies": {
-    "concurrently": "^6.3.0",
+    "concurrently": "^7.6.0",
     "eslint": "^8.0.1",
     "mocha": "^9.1.3"
   },
