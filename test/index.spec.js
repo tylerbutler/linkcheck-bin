@@ -6,6 +6,8 @@ import bin from "../index.js";
 it("linkcheck exists and runs?", async function () {
   this.timeout(30000); // increase timeout to an excessive 30 seconds for CI
 
+  console.log(bin);
+
   assert(execFile(bin, ["--version"], function (error, stdout) {
     if (error) {
       throw error;

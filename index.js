@@ -1,5 +1,9 @@
 import path from "path";
-import { __dirname, getBinFilename } from "./lib/utils.js";
+import { fileURLToPath } from "url";
+import { getBinFilename } from "./lib/utils.js";
+
+// https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c#what-do-i-use-instead-of-__dirname-and-__filename
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const linkcheck = path.join(
   __dirname,
