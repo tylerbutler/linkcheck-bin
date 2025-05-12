@@ -36,35 +36,22 @@
     "bump": "npm --no-git-tag-version version",
     "bump:prerelease": "npm --no-git-tag-version version prerelease",
     "postinstall": "node lib/install.js",
-    "linkcheck": "linkcheck --check-anchors https://tylerbutler.com",
+    "linkcheck": "node lib/cli.js --check-anchors https://tylerbutler.com",
     "lint": "eslint .",
     "test": "mocha",
     "prepack": "concurrently npm:lint npm:test"
   },
-  "eslintConfig": {
-    "env": {
-      "es6": true,
-      "node": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 2020,
-      "sourceType": "module"
-    },
-    "extends": "eslint:recommended",
-    "ignorePatterns": [
-      "vendor/**",
-      "*.d.ts"
-    ]
-  },
   "dependencies": {
     "careful-downloader": "^3.0.0",
-    "log-symbols": "^6.0.0",
+    "log-symbols": "^7.0.0",
     "read-package-up": "^11.0.0"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
-    "eslint": "^8.57.0",
-    "mocha": "^10.4.0"
+    "@eslint/js": "^9.26.0",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.26.0",
+    "globals": "^16.1.0",
+    "mocha": "^11.2.2"
   },
   "engines": {
     "node": ">=18.0.0"
