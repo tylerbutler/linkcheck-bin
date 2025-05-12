@@ -11,8 +11,7 @@ it("linkcheck exists", async () => {
 });
 
 it("getBinVersion returns the correct version", async () => {
-	const version = await getBinVersion(bin);
-	console.log(version);
+	const version = getBinVersion(bin);
 	assert.equal(
 		version,
 		"linkcheck version 3.0.0",
