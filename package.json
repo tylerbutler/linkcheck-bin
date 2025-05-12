@@ -1,6 +1,6 @@
 {
   "name": "linkcheck-bin",
-  "version": "3.0.0-1",
+  "version": "3.0.0-2",
   "description": "An npm-installable wrapper for @filiph's linkcheck, a reasonably fast link checker.",
   "keywords": [
     "linkcheck",
