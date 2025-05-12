@@ -1,12 +1,27 @@
 /* eslint-env node, mocha */
-import { execFile } from "child_process";
 import assert from "assert";
+import { execFile } from "child_process";
+import { existsSync } from "fs";
 import bin from "../index.js";
+import { getBinVersion } from "../lib/utils.js";
 
-it("linkcheck exists and runs?", async function () {
-	this.timeout(30000); // increase timeout to an excessive 30 seconds for CI
-
+it("linkcheck exists", async () => {
 	console.log(bin);
+	assert(existsSync(bin), "linkcheck binary does not exist");
+});
+
+it("getBinVersion returns the correct version", async () => {
+	const version = await getBinVersion(bin);
+	console.log(version);
+	assert.equal(
+		version,
+		"linkcheck version 3.0.0",
+		"linkcheck version does not match",
+	);
+});
+
+it("linkcheck runs", async function () {
+	this.timeout(30000); // increase timeout to an excessive 30 seconds for CI
 
 	assert(
 		execFile(
