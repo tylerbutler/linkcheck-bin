@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "careful-downloader": "^3.0.0",
-    "log-symbols": "^7.0.0",
+    "log-symbols": "^7.0.1",
     "read-package-up": "^11.0.0"
   },
   "devDependencies": {
